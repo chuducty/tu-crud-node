@@ -47,10 +47,7 @@ var storage = multer.diskStorage({
 var upload = multer({storage: storage});
 
 app.get('/', (req, res) => {
-  res.render('homepage.hbs', {
-    pageTitle: "Home Page",
-    currentYear: new Date().getFullYear()
-  });
+  res.render('homepage.hbs');
 });
 
 // Define a helper function by handlebars
